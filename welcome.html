@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome to LEAP 2025 Industrial Agent</title>
+<style>
+    * {
+        font-family: "Calibri", Arial, sans-serif;
+    }
+    body {
+        margin: 0;
+        padding: 20px;
+        background: url('backgroundwelcome.png') no-repeat center center fixed;
+        background-size: cover;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        padding: 10px 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .logo-container img {
+        height: 50px;
+        margin-right: 15px;
+    }
+    .content {
+        text-align: center;
+        margin-bottom: 20px;
+        margin-top: 100px;
+        width: 80%;
+    }
+    .content h1 {
+        font-size: 36px;
+        margin: 0;
+    }
+    .content p {
+        font-size: 16px;
+        margin-top: 10px;
+        line-height: 1.5;
+    }
+    .footer {
+        background-color: #00274d;
+        color: white;
+        font-size: 12px;
+        padding: 8px 0;
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+    .button-container {
+        margin-top: 20px;
+        text-align: center;
+    }
+    .navigate-button {
+        background-color: #c04fc0; /* Slightly darker pink */
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .navigate-button:hover {
+        background-color: #a13cbc;
+    }
+    .info-section {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        width: 80%;
+    }
+    .info-box {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        padding: 15px;
+        border-radius: 10px;
+        cursor: pointer;
+        width: 30%;
+        text-align: center;
+    }
+    .info-box img {
+        width: 50px;
+        cursor: pointer;
+    }
+    .info-box h2 {
+        margin: 10px 0 5px 0;
+        font-size: 20px;
+    }
+    .info-box p {
+        display: none;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    .scrolling-container {
+        position: fixed;
+        bottom: 120px; /* Moved higher */
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 20px 0; /* Increased padding for spacing */
+        text-align: center;
+    }
+    .scrolling-title {
+        font-size: 18px;
+        font-weight: bold;
+        color: #ff60ff; /* Pink text */
+        margin-bottom: 12px; /* Added more spacing */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .scrolling-title img {
+        width: 26px; /* Increased icon size */
+        height: 26px; /* Increased icon size */
+        margin-right: 10px;
+    }
+    .scrolling-text {
+        display: inline-block;
+        white-space: nowrap;
+        animation: scrollLeft 40s linear infinite; /* Starts immediately */
+    }
+    .scrolling-box {
+        display: inline-block;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 10px 15px;
+        margin: 0 10px;
+        border-radius: 5px;
+    }
+    @keyframes scrollLeft {
+        from {
+            transform: translateX(0%);
+        }
+        to {
+            transform: translateX(-100%);
+        }
+    }
+</style>
+<script>
+    function toggleInfo(id) {
+        var element = document.getElementById(id);
+        if (element.style.display === "none") {
+            element.style.display = "block";
+        } else {
+            element.style.display = "none";
+        }
+    }
+</script>
+</head>
+<body>
+<div class="logo-container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft Logo">
+    <img src="kpmg.svg" alt="KPMG Logo">
+</div>
+<div class="content">
+    <h1>Welcome to LEAP 2025 and Industry 5.0 Solutions</h1>
+    <p>
+        Discover cutting-edge advancements in AI and automation, powered by <strong>Microsoft Services</strong>  and <strong>KPMG</strong>.
+    </p>
+</div>
+<div class="info-section">
+    <div class="info-box">
+        <img src="challenge.png" alt="Challenge" onclick="toggleInfo('challenge')">
+        <h2>Challenge</h2>
+        <p id="challenge">In phosphate production, the flotation circuit is key, but maintaining the right pH levels has been a challenge...</p>
+    </div>
+    <div class="info-box">
+        <img src="solution.png" alt="Solution" onclick="toggleInfo('solution')">
+        <h2>Solution</h2>
+        <p id="solution">Maaden developed an intelligent application that predicts phosphate production metrics using real-time data...</p>
+    </div>
+    <div class="info-box">
+        <img src="impact.png" alt="Impact" onclick="toggleInfo('impact')">
+        <h2>Impact</h2>
+        <p id="impact">This innovation has improved efficiency, reduced waste, and raised production standards...</p>
+    </div>
+</div>
+<div class="button-container">
+    <button class="navigate-button" onclick="window.location.href='index.html'">Start</button>
+</div>
+<div class="scrolling-container">
+    <div class="scrolling-title">
+        <img src="trend.png" alt="Trend Icon"> Key Trends in Industry 5.0
+    </div>
+    <div class="scrolling-text">
+        <span class="scrolling-box">AI & Human Collaboration</span>
+        <span class="scrolling-box">Hyper-Personalization in Manufacturing</span>
+        <span class="scrolling-box">Sustainable & Circular Economy</span>
+        <span class="scrolling-box">Resilient & Decentralized Supply Chains</span>
+        <span class="scrolling-box">Human-Centric AI Design</span>
+        <span class="scrolling-box">Next-Gen Cobots (Collaborative Robots)</span>
+        <span class="scrolling-box">Ethical & Transparent AI</span>
+        <span class="scrolling-box">Real-time Data-Driven Decision Making</span>
+        <span class="scrolling-box">Smart Factories 2.0</span>
+        <span class="scrolling-box">Quantum Computing in Industry</span>
+        <span class="scrolling-box">Well-being & Ergonomics in Workplaces</span>
+        <span class="scrolling-box">Blockchain for Secure Transactions</span>
+        <span class="scrolling-box">Digital Twins for Predictive Maintenance</span>
+        <span class="scrolling-box">Augmented Intelligence</span>
+        <span class="scrolling-box">Energy-Efficient Manufacturing</span>
+    </div>
+</div>
+<div class="footer">Powered by Microsoft & KPMG</div>
+</body>
+</html>
